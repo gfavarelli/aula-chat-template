@@ -2,6 +2,16 @@ body{
     background-color: #f4f7f6;
     margin-top:20px;
 }
+
+.input-entrar{
+    margin-top: 50px;
+}
+
+.titulo-login {
+    text-align: center;
+    margin-top: 20%;
+}
+
 .card {
     height: 600px;
     background: #fff;
