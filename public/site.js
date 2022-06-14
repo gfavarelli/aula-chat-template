@@ -1,16 +1,11 @@
 const inputTexto = document.getElementById('enviarMensagem');
 const btnSair  = document.getElementById('btnSair');
 const getLocalStorage = () =>JSON.parse(localStorage.getItem('usuario')) ?? [];
-const setLocalStorage = (usuario) => localStorage.setItem("usuario", JSON.stringify(usuario))
 
 const socket = io();
 const { usuarionome, meuid } = Qs.parse(location.search, { ignoreQueryPrefix: true });
 
 socket.emit('entrarSala', { usuarionome, meuid});
-setLocalStorage({
-    nome: usuarionome,
-    meuId: meuid
-});
 
 inputTexto.addEventListener('keyup', function(e){
     var key = e.key === 'Enter';
